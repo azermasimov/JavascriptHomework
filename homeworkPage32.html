@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>HomeWork 2 (Page 32)</title>
+  </head>
+  <body>
+
+    <h2>Write "a" to know car's properties, "e" to drive to work, "q" to drive around the world, to get tune up, "w" to go.) </h2>
+    <input type="text" id="message">
+
+
+  <script>
+
+      var car = {
+        make: "Honda",
+        model: "Fit",
+        color: "Blue Raspberry",
+        mileage: 3000,
+        isWorking: true,
+
+        driveToWork: function() {
+
+          alert("Old Mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 8;
+
+          alert("New mileage: " + this.mileage);
+        },
+
+        driveAroundWorld: function() {
+
+          alert("Old Mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 24000;
+
+          alert("New Mileage: " + this.mileage);
+          alert("Car needs a tuneup!");
+
+          this.isWorking = false;
+        },
+
+        getTuneUp: function() {
+          alert("Car is ready to go!");
+          this.isWorking = true;
+        },
+
+        honk: function() {
+          alert("Honk! Honk!");
+        }
+      };
+
+
+      let msg = document.querySelector("#message");
+
+      function reWriteStats (par) {
+            msg.addEventListener("keyup", (event) => {
+            // console.log(par.value);
+            if (par.value == "a") {
+                console.log("This is " + car.make + " " + car.color + " " + car.model + " model " + "Working: " + car.isWorking);
+                alert("This is " + car.make + " " + car.color + " " + car.model + " model " + "Working: " + car.isWorking);
+            }
+            else if (par.value == "e") {
+                console.log(car.driveToWork());
+            }
+            else if (par.value == "q") {
+                console.log(car.driveAroundWorld());
+            }
+            else if (par.value == "r") {
+                console.log(car.getTuneUp());
+            }
+            else if (par.value == "w") {
+                console.log(car.honk());
+            }
+            else {
+                alert("Doesn't work?)) Because it's not your car. It's Mine)");
+            }
+        });
+      }
+
+      reWriteStats(msg);
+
+
+      
+
+  </script>
+    
+  </body>
+</html>

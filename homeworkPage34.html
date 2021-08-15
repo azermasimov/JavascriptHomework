@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork 3 (Page 34)</title>
+</head>
+<body>
+    
+
+    <script>
+        let questions = {
+            q1: ["QUESTION", "ANSWER"],
+            q2: ["QUESTION", "ANSWER"],
+            q3: ["QUESTION", "ANSWER"],
+            q4: ["QUESTION", "ANSWER"],
+            q5: ["QUESTION", "ANSWER"],
+            q6: ["QUESTION", "ANSWER"],
+            q7: ["QUESTION", "ANSWER"],
+            q8: ["QUESTION", "ANSWER"],
+            q9: ["QUESTION", "ANSWER"],
+            q10: ["QUESTION", "ANSWER"]
+        };
+
+        // SOLUTION 1
+
+        for (const question in questions) {
+            
+            console.log(question);
+            // prompt(question);
+
+            if (prompt(questions[question][0]) == "t") {
+                alert("Answered Right :)");
+            } else {
+                alert("Answered Wrong :(");
+            }
+        }
+
+
+
+        /* SOLUTION 2 => DIFFERENT FROM THE HOMEWORK 
+
+        for (const question in questions) {
+            // prompt(question);
+            console.log(questions[question][1]);
+            
+            if (prompt(question) == questions[question][1]) {
+                alert("Answered Right :)");
+            } else {
+                alert("Answered Wrong :(");
+            }
+        }
+        */
+
+    </script>
+</body>
+</html>
